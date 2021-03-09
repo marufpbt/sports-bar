@@ -1,0 +1,27 @@
+body {
+	background: #0E0A2A;
+	font-size: 15px;
+}
+.description{
+	color: #C6C6C6;
+}
+.league-wrapper {
+	background: #3a42FF;
+	color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+.controlWidth img{
+	width: 20px;
+	margin-right:5px;
+}
+.social-meadia img{
+	width: 5%;
+	margin: 0 10px;
+}
+
+@media only screen and (max-width: 600px) {
+	.social-meadia img{
+		width: 10%;
+	}
+  }

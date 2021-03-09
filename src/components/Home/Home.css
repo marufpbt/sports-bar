@@ -1,0 +1,14 @@
+.league-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	text-align: center;
+	background: #0E0A2A;
+	padding-top: 20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+	.league-container {
+		grid-template-columns: auto;
+	}
+  }
