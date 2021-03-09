@@ -24,7 +24,6 @@ function App() {
           <Route path="/league/:idLeague">
             <ExploreDetail></ExploreDetail>
           </Route>
-          <Route path='/faq' component={() => window.location = 'https://example.com/faq.html'}/>
           <Route path="*">
             <NotFound></NotFound>
           </Route>

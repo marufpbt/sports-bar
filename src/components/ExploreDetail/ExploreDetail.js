@@ -2,15 +2,16 @@ import './ExploreDetail.css';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import maleImage from '../../images/male.png';
-import femaleImage from '../../images/female.png';
-import foundedIcon from '../../icons/found 1.png';
-import flagIcon from '../../icons/flag (1) 1.png';
-import footballIcon from '../../icons/football (1) 1.png';
-import genderIcon from '../../icons/male-gender-sign 1.png';
+import male from '../../images/male.png';
+import female from '../../images/female.png';
+import founded from '../../icons/found 1.png';
+import flag from '../../icons/flag (1) 1.png';
+import football from '../../icons/football (1) 1.png';
+import maleGender from '../../icons/male-gender-sign 1.png';
 import youtube from '../../icons/YouTube.png';
 import twitter from '../../icons/Twitter.png';
 import facebook from '../../icons/Facebook.png';
+
 const ExploreDetail = () => {
 	const { idLeague } = useParams();
 	const [league, setLeague] = useState({});
@@ -23,10 +24,10 @@ const ExploreDetail = () => {
 	const { strBanner, strLeague, strTwitter, strYoutube, strRSS, strCountry, strDescriptionEN, strDescriptionFR, intFormedYear, strGender } = league;
 	let gender;
 	if (strGender == "Male") {
-		gender = <img src={maleImage} style={{ width: '100%' }} alt="" />;
+		gender = <img src={male} style={{ width: '100%' }} alt="" />;
 	}
 	else {
-		gender = <img src={femaleImage} style={{ width: '100%' }} alt="" />;
+		gender = <img src={female} style={{ width: '100%' }} alt="" />;
 	}
 	return (
 		<>
@@ -38,10 +39,10 @@ const ExploreDetail = () => {
 					<div className="col-12 col-md-7">
 						<div className="mt-5 controlWidth">
 							<h3>{strLeague}</h3>
-							<h6><img src={foundedIcon}  />Founded: {intFormedYear}</h6>
-							<h6><img src={flagIcon}  />Country: {strCountry}</h6>
-							<h6><img src={footballIcon}  />Sport Type: Football</h6>
-							<h6><img src={genderIcon}  />Gender: {strGender}</h6>
+							<h6><img src={founded} />Founded: {intFormedYear}</h6>
+							<h6><img src={flag} />Country: {strCountry}</h6>
+							<h6><img src={football} />Sport Type: Football</h6>
+							<h6><img src={maleGender} />Gender: {strGender}</h6>
 						</div>
 					</div>
 					<div className="col-12 col-md-5">

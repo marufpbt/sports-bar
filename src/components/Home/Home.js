@@ -10,7 +10,8 @@ const Home = () => {
 		fetch(url)
 			.then(res => res.json())
 			.then(data => setLeagues(data.leagues))
-	}, [])
+	}, []);
+	// const first9 = leagues.slice(1,10);
 	return (
 		<div>
 			<div className="banner-container">
