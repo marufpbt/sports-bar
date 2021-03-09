@@ -63,7 +63,6 @@ const ExploreDetail = () => {
 						<a href={strTwitter} target="_blank"><img src={twitter} alt="" /></a>
 						<a href={strRSS} target="_blank"><img src={facebook} alt="" /></a>
 						<a href={strYoutube} target="_blank"><img src={youtube} alt="" /></a>
-						<a href="/faq"> FAQ </a>
 					</div>
 				</div>
 			</div>
