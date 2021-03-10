@@ -21,9 +21,9 @@ const ExploreDetail = () => {
 			.then(res => res.json())
 			.then(data => setLeague(data.leagues[0]))
 	}, [idLeague]);
-	const { strBanner, strLeague, strTwitter, strYoutube, strRSS, strCountry, strDescriptionEN, strDescriptionFR, intFormedYear, strGender } = league;
+	const { strBanner, strLogo, strLeague, strSport, strTwitter, strYoutube, strFacebook, strCountry, strDescriptionEN, strDescriptionFR, intFormedYear, strGender } = league;
 	let gender;
-	if (strGender == "Male") {
+	if (strGender === "Male") {
 		gender = <img src={male} style={{ width: '100%' }} alt="" />;
 	}
 	else {
@@ -31,9 +31,21 @@ const ExploreDetail = () => {
 	}
 	return (
 		<>
-			<div style={{ textAlign: 'center' }}>
-				<img src={strBanner} alt={strLeague} style={{ width: '100%' }} />
-			</div>
+			<section id="home-section" style={{
+				backgroundImage: `url(${strBanner})`
+			}}>
+				<div className="dark-overlay">
+					<div className="home-inner">
+						<div className="container">
+							<div className="row">
+								<div className="col-12 banner-logo">
+									<img src={strLogo} alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 			<div className="container mt-5">
 				<div className="row league-wrapper">
 					<div className="col-12 col-md-7">
@@ -41,7 +53,7 @@ const ExploreDetail = () => {
 							<h3>{strLeague}</h3>
 							<h6><img src={founded} />Founded: {intFormedYear}</h6>
 							<h6><img src={flag} />Country: {strCountry}</h6>
-							<h6><img src={football} />Sport Type: Football</h6>
+							<h6><img src={football} />Sport Type: {strSport}</h6>
 							<h6><img src={maleGender} />Gender: {strGender}</h6>
 						</div>
 					</div>
@@ -61,9 +73,9 @@ const ExploreDetail = () => {
 				</div>
 				<div className="row my-4">
 					<div className="col text-center social-meadia">
-						<a href={strTwitter} target="_blank"><img src={twitter} alt="" /></a>
-						<a href={strRSS} target="_blank"><img src={facebook} alt="" /></a>
-						<a href={strYoutube} target="_blank"><img src={youtube} alt="" /></a>
+						<a href={`https://${strTwitter}`}><img src={twitter} alt="" /></a>
+						<a href={`https://${strFacebook}`}><img src={facebook} alt="" /></a>
+						<a href={`https://${strYoutube}`}><img src={youtube} alt="" /></a>
 					</div>
 				</div>
 			</div>

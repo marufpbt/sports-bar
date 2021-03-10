@@ -2,26 +2,57 @@ body {
 	background: #0E0A2A;
 	font-size: 15px;
 }
-.description{
+
+.description {
 	color: #C6C6C6;
 }
+
 .league-wrapper {
 	background: #3a42FF;
 	color: #fff;
-    padding: 20px;
-    border-radius: 8px;
+	padding: 20px;
+	border-radius: 8px;
 }
-.controlWidth img{
+
+.controlWidth img {
 	width: 20px;
-	margin-right:5px;
+	margin-right: 5px;
 }
-.social-meadia img{
+
+.social-meadia img {
 	width: 5%;
 	margin: 0 10px;
 }
 
+.banner-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+}
+.banner-logo img{
+	width: 40%;
+}
+
+#home-section {
+	color: #fff;
+	min-height: 250px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#home-section .dark-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    min-height: 250px;
+}
+
+
 @media only screen and (max-width: 600px) {
-	.social-meadia img{
+	.social-meadia img {
 		width: 10%;
 	}
-  }
+	.banner-logo img {
+		width: 100%;
+		margin-top: 30px;
+	}
+}

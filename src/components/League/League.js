@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 const League = (props) => {
-	const { strLeague, idLeague } = props.league;
+	const { strLeague, idLeague, strSport } = props.league;
 	const history = useHistory();
 	const exploreDetail = (idLeague) => {
 		const url = `/league/${idLeague}`;
@@ -14,7 +14,7 @@ const League = (props) => {
 	return (
 		<div className="leagueStyle">
 			<h3>{strLeague}</h3>
-			<p><small>Sports type: Football</small></p>
+			<p><small>Sports type: {strSport}</small></p>
 			<button className="btn btn-primary" onClick={() => exploreDetail(idLeague)}>Explore <FontAwesomeIcon icon={faAngleRight} /></button>
 		</div>
 	);
